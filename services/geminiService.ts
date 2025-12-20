@@ -23,7 +23,7 @@ export const generateProductDescription = async (productName: string, category: 
         `;
 
         const response = await client.models.generateContent({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-3-flash-preview',
             contents: prompt,
         });
 
@@ -40,18 +40,18 @@ export const analyzeStoreData = async (ordersCount: number, revenue: number): Pr
 
     try {
         const prompt = `
-        بصفتك مستشار أعمال، قدم نصيحة واحدة قصيرة جداً (جملتين) لمدير متجر إلكتروني.
+        بصفتك مستشار أعمال، قدم نصيحة واحدة قصيرة جداً (جملتين) لمدير متجر إلكتروني بناءً على أدائه.
         عدد الطلبات الحالية: ${ordersCount}
         الإيرادات: ${revenue} درهم مغربي.
         `;
         
         const response = await client.models.generateContent({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-3-flash-preview',
             contents: prompt,
         });
         
         return response.text.trim();
     } catch (e) {
-        return "لا يمكن إجراء التحليل حالياً.";
+        return "لا يمكن إجراء التحليل حالياً. استمر في العمل الرائع!";
     }
 }

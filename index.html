@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>متجر النخبة للتجارة الإلكترونية</title>
+    <title>متجر النخبة | وجهتك الأولى للتسوق</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Arabic Font (Cairo) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
@@ -21,33 +21,36 @@
             colors: {
               primary: '#0F766E', // Teal 700
               secondary: '#F59E0B', // Amber 500
+              accent: '#14b8a6',
             }
           }
         }
       }
     </script>
     <style>
-      /* Smooth scrolling */
       html { scroll-behavior: smooth; }
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar { width: 8px; }
-      ::-webkit-scrollbar-track { background: #f1f1f1; }
-      ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-      ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+      body { overflow-x: hidden; }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #f8fafc; }
+      ::-webkit-scrollbar-thumb { background: #0f766e; border-radius: 10px; }
+      .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
     </style>
-  <script type="importmap">
+    <script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@7.1.5",
+    "@google/genai": "https://esm.sh/@google/genai@1.3.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
   }
 }
 </script>
-</head>
-  <body class="bg-gray-50 text-gray-800 font-sans">
+  </head>
+  <body class="bg-[#fcfdfd] text-gray-800 font-sans">
     <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
